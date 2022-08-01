@@ -39,9 +39,8 @@ body {
 }
 
 /* {
-  outline: 1px solid red;
+    outline: 1px solid red;
 }*/
-
 img {
   display: block;
   max-width: 100%;
@@ -81,7 +80,7 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0;
+  /*margin-top: 0;*/
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -154,12 +153,21 @@ img {
   line-height: 1.2x;
   text-decoration: none;
   color: var(--accent-color);
-
 }
 .logo__second {
   color: var(--primary-text-color);
 }
 
+/*.overlay {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(");
+}*/
 .overlay {
   max-width: 1600px;
   height: 600px;
@@ -196,7 +204,7 @@ img {
 .modal {
   position: absolute;
   margin: 0;
-  padding: 40px;
+  /*padding: 40px;*/
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -228,7 +236,6 @@ img {
   cursor: pointer;
   transition: color var(--animation-transition);
 }
-
 .button-close-modal:hover, .button-close-modal:focus {
   color: var(--accent-color);
 }
@@ -251,7 +258,6 @@ img {
   border: transparent;
   transition: background-color var(--animation-transition);
 }
-
 .button-agry:hover, .button-agry:focus {
   background-color: #188CE8;
 }
@@ -281,7 +287,6 @@ img {
 .form-field input:focus {
   border: 1px solid var(--accent-color);
 }
-
 .form-field input:focus + .form-icon {
   fill: var(--accent-color);
 }
@@ -304,51 +309,6 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
-}
-
-/*.modal {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
-  border-radius: 4px;
-  background-color: var(--primary-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-*/
-
-.button-close {
-  fill: currentColor;
-  width: 11px;
-  height: 11px;
-}
-.button-close-modal {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  color: #000000;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  background: transparent;
-  cursor: pointer;
-  transition: color var(--animation-transition);
-}
-.button-close-modal:hover, .button-close-modal:focus {
-  color: var(--accent-color);
 }
 
 .checkbox {
@@ -394,7 +354,7 @@ img {
 .checkbox:checked + .form-chek__icon {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  background-image: url(../imges/vector.svg);
+  background-image: url(../imiges/icons/icon.svg/black-block.svg);
   background-repeat: no-repeat;
 }
 
@@ -451,6 +411,34 @@ textarea {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.form {
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgb(117, 117, 117);
+}
+
 .form-field input {
   padding-left: 42px;
   width: 100%;
@@ -466,6 +454,188 @@ textarea {
 }
 .form-field input:focus + .form-icon {
   fill: var(--accent-color);
+}
+
+.button-agry {
+  margin-left: auto;
+  width: 200px;
+  height: 50px;
+  margin-right: auto;
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  border: transparent;
+  transition: background-color var(--animation-transition);
+}
+.button-agry:hover, .button-agry:focus {
+  background-color: #188CE8;
+}
+
+.form-field label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--title-text-color);
+}
+
+.form-text {
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
+.form-input-icon {
+  display: flex;
+  position: relative;
+}
+
+.form-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  fill: currentColor;
+}
+
+.form-comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 448px;
+  height: 138px;
+}
+.form-comment label {
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 4px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--title-text-color);
+}
+
+textarea {
+  resize: none;
+}
+
+.form-comment textarea {
+  padding: 12px 16px;
+  margin: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: var(--animation-transition);
+}
+.form-comment textarea:focus {
+  border: 1px solid var(--accent-color);
+}
+.form-comment textarea::-moz-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-comment textarea:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-comment textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+.form-chek {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.72;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  height: 24px;
+  margin-bottom: 30px;
+}
+.form-chek__link {
+  color: var(--accent-color);
+  padding-left: 2px;
+  text-decoration: underline;
+}
+.form-chek__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+}
+
+.checkbox:checked + .form-chek__icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url(../imiges/icons/icon.svg/black-block.svg);
+  background-repeat: no-repeat;
+}
+
+.form {
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgb(117, 117, 117);
 }
 
 .main-nav {
@@ -526,18 +696,13 @@ textarea {
   border-radius: 2px;
 }
 
-.auht-nav {
+.auth-nav {
   display: flex;
   margin-left: auto;
 }
 
-.auth-nav__icon {
-  margin-right: 10px;
-  fill: currentColor;
-}
-
 /* Иконки навигации */
-.auht-nav__link {
+.auth-nav__link {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -553,8 +718,13 @@ textarea {
   color: var(--title-text-color);
   transition: color var(--animation-transition);
 }
-.auht-nav__link:hover, .auht-nav__link:focus {
+.auth-nav__link:hover, .auth-nav__link:focus {
   color: var(--accent-color);
+}
+
+.auth-nav__icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .hero {
@@ -846,7 +1016,7 @@ textarea {
   margin-right: 156px;
 }
 
-.logo--color {
+.logo__color {
   color: var(--primary-white-color);
 }
 

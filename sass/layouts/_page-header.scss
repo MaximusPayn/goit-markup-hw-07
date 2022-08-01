@@ -77,22 +77,16 @@
 }
 
 
-.auht-nav {
+.auth-nav {
     display: flex;
     margin-left: auto;
-
-}
-
-.auth-nav__icon {
-    margin-right: 10px;
-    fill: currentColor;
 
 }
 
 /* Иконки навигации */
 
 
-.auht-nav__link {
+.auth-nav__link {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -116,5 +110,11 @@
         &:focus {
             color: var(--accent-color);
         }
+
+}
+
+.auth-nav__icon {
+    margin-right: 10px;
+    fill: currentColor;
 
 }
